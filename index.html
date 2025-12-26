@@ -2,200 +2,180 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* RESET */
     * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-body {
-  font-family: Pretendard, -apple-system, BlinkMacSystemFont, sans-serif;
-  background: #eaeaea;
-  color: #111;
-}
+    body {
+      font-family: Pretendard, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #eaeaea;
+      color: #111;
+    }
 
-/* PAGE COMMON */
-.page {
-  width: 100%;
-  min-height: 100vh;
-  background: #fff;
-  border-radius: 32px;
-  margin: 60px auto;
-  padding: 48px 64px;
-  max-width: 1600px;
-  position: relative;
-}
+    /* PAGE COMMON */
+    .page {
+      width: 100%;
+      min-height: 100vh;
+      background: #fff;
+      border-radius: 32px;
+      margin: 60px auto;
+      padding: 48px 64px;
+      max-width: 1600px;
+      position: relative;
+    }
 
-/* TOP / BOTTOM */
-.top,
-.bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+    /* TOP / BOTTOM BAR */
+    .top,
+    .bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-.chip-group {
-  display: flex;
-  gap: 12px;
-}
+    .chip-group {
+      display: flex;
+      gap: 12px;
+    }
 
-.chip {
-  border: 1px solid #bbb;
-  border-radius: 999px;
-  padding: 6px 16px;
-  font-size: 13px;
-}
+    .chip {
+      border: 1px solid #bbb;
+      border-radius: 999px;
+      padding: 6px 16px;
+      font-size: 13px;
+    }
 
-.date {
-  background: #111;
-  color: #fff;
-  padding: 6px 16px;
-  border-radius: 999px;
-  font-size: 13px;
-}
+    .date {
+      background: #111;
+      color: #fff;
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 13px;
+    }
 
-.date.black {
-  background: #000;
-}
+    /* COVER */
+    .cover {
+      text-align: center;
+    }
 
-/* COVER */
-.cover .center {
-  text-align: center;
-  margin-top: 160px;
-}
+    .cover h1 {
+      margin-top: 160px;
+      font-size: 96px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
 
-.cover h1 {
-  font-size: 96px;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-}
+    .cover .name {
+      margin-top: 24px;
+      font-size: 14px;
+      letter-spacing: 0.2em;
+    }
 
-.cover .name {
-  margin-top: 24px;
-  font-size: 14px;
-  letter-spacing: 0.2em;
-}
+    /* STRENGTH */
+    .strength {
+      background: #f7f7f7;
+    }
 
-/* STRENGTH */
-.strength {
-  background: #f7f7f7;
-}
+    .label {
+      display: inline-block;
+      background: #e7f0b5;
+      padding: 8px 20px;
+      border-radius: 999px;
+      font-size: 14px;
+      margin-bottom: 60px;
+    }
 
-.label {
-  display: inline-block;
-  background: #e7f0b5;
-  padding: 8px 20px;
-  border-radius: 999px;
-  font-size: 14px;
-  margin-bottom: 60px;
-}
+    .card-wrap {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+    }
 
-.card-wrap {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-}
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 40px 32px;
+      text-align: center;
+    }
 
-.card {
-  background: #fff;
-  border-radius: 20px;
-  padding: 40px 32px;
-  text-align: center;
-}
+    .card h3 {
+      font-size: 18px;
+      line-height: 1.4;
+      margin-bottom: 16px;
+    }
 
-.card h3 {
-  font-size: 18px;
-  line-height: 1.4;
-  margin-bottom: 16px;
-}
+    .card .line {
+      display: block;
+      width: 40px;
+      height: 1px;
+      background: #ccc;
+      margin: 0 auto 16px;
+    }
 
-.card .line {
-  display: block;
-  width: 40px;
-  height: 1px;
-  background: #ccc;
-  margin: 0 auto 16px;
-}
+    .card p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #555;
+    }
 
-.card p {
-  font-size: 14px;
-  line-height: 1.6;
-  color: #555;
-}
+    /* THANK YOU */
+    .thanks {
+      background: #f5f5f5;
+      padding-top: 160px;
+    }
 
-/* THANK YOU */
-.thanks {
-  background: #eaeaea;
-  padding-top: 160px;
-}
+    .thanks h2 {
+      font-size: 48px;
+      margin-bottom: 40px;
+    }
 
-.thanks h2 {
-  font-size: 48px;
-  mar
+    .contact p {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
 
+    .contact .name {
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .card-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .cover h1 {
+        font-size: 56px;
+        margin-top: 120px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-  <!-- SECTION 01 : COVER -->
+  <!-- COVER -->
   <section class="page cover">
-    <header class="top">
+    <div class="top">
       <div class="chip-group">
         <span class="chip">VISUAL</span>
         <span class="chip">DESIGNER</span>
       </div>
       <span class="date">2030.10</span>
-    </header>
-
-    <div class="center">
-      <h1>PORTFOLIO</h1>
-      <p class="name">SOO JIN AE</p>
     </div>
+
+    <h1>PORTFOLIO</h1>
+    <p class="name">SOO JIN AE</p>
   </section>
 
-  <!-- SECTION 02 : CORE STRENGTH -->
-  <section class="page strength">
-    <span class="label">핵심강점</span>
-
-    <div class="card-wrap">
-      <div class="card">
-        <h3>창의적 문제<br>해결 능력</h3>
-        <span class="line"></span>
-        <p>
-          새로운 관점으로 문제를 분석하며<br>
-          실용적이면서도 혁신적인<br>
-          디자인 솔루션을 제시합니다.<br>
-          사용자와 클라이언트의 요구를<br>
-          창의적으로 반영합니다.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>디자인 소프트웨어 및<br>도구 숙련도</h3>
-        <span class="line"></span>
-        <p>
-          다양한 디자인 툴에 능숙하며<br>
-          최신 도구를 활용하여 효율적이고<br>
-          고품질의 결과물을 제작합니다.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>브랜드 및 시각적<br>일관성 이해</h3>
-        <span class="line"></span>
-        <p>
-          브랜드의 철학과 메시지를<br>
-          시각적으로 표현하며,<br>
-          모든 디자인 요소에서<br>
-          일관성을 유지합니다.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 03 : CORE STRENGTH (REPEAT) -->
+  <!-- STRENGTH -->
   <section class="page strength">
     <span class="label">핵심강점</span>
 
@@ -215,7 +195,8 @@ body {
         <span class="line"></span>
         <p>
           다양한 디자인 툴에 능숙하며<br>
-          최신 도구를 활용합니다.
+          최신 도구를 활용하여<br>
+          효율적인 결과물을 제작합니다.
         </p>
       </div>
 
@@ -223,22 +204,15 @@ body {
         <h3>브랜드 및 시각적<br>일관성 이해</h3>
         <span class="line"></span>
         <p>
-          브랜드 아이덴티티를<br>
-          시각적으로 일관되게 유지합니다.
+          브랜드의 철학과 메시지를<br>
+          시각적으로 표현하며<br>
+          일관성을 유지합니다.
         </p>
       </div>
     </div>
-
-    <footer class="bottom">
-      <div class="chip-group">
-        <span class="chip">VISUAL</span>
-        <span class="chip">DESIGNER</span>
-      </div>
-      <span class="date black">2030.10</span>
-    </footer>
   </section>
 
-  <!-- SECTION 04 : THANK YOU -->
+  <!-- THANK YOU -->
   <section class="page thanks">
     <h2>감사합니다</h2>
 
