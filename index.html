@@ -1,168 +1,221 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Portfolio</title>
 
-  <style>
-    /* RESET */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    body {
-      font-family: Pretendard, -apple-system, BlinkMacSystemFont, sans-serif;
-      background: #eaeaea;
-      color: #111;
-    }
+body {
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #eaeaea;
+  color: #111;
+}
 
-    /* PAGE COMMON */
-    .page {
-      width: 100%;
-      min-height: 100vh;
-      background: #fff;
-      border-radius: 32px;
-      margin: 60px auto;
-      padding: 48px 64px;
-      max-width: 1600px;
-      position: relative;
-    }
+/* PAGE COMMON */
+.page {
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+  border-radius: 32px;
+  margin: 60px auto;
+  max-width: 1600px;
+  position: relative;
 
-    /* TOP / BOTTOM BAR */
-    .top,
-    .bottom {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    .chip-group {
-      display: flex;
-      gap: 12px;
-    }
+.page-inner {
+  width: 100%;
+  padding: 80px 64px;
+}
 
-    .chip {
-      border: 1px solid #bbb;
-      border-radius: 999px;
-      padding: 6px 16px;
-      font-size: 13px;
-    }
+/* TOP BAR */
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 120px;
+}
 
-    .date {
-      background: #111;
-      color: #fff;
-      padding: 6px 16px;
-      border-radius: 999px;
-      font-size: 13px;
-    }
+.chip-group {
+  display: flex;
+  gap: 12px;
+}
 
-    /* COVER */
-    .cover {
-      text-align: center;
-    }
+.chip {
+  border: 1px solid #bbb;
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-size: 13px;
+}
 
-    .cover h1 {
-      margin-top: 160px;
-      font-size: 96px;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-    }
+.date {
+  background: #111;
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+}
 
-    .cover .name {
-      margin-top: 24px;
-      font-size: 14px;
-      letter-spacing: 0.2em;
-    }
+/* COVER */
+.cover {
+  text-align: center;
+}
 
-    /* STRENGTH */
-    .strength {
-      background: #f7f7f7;
-    }
+.cover h1 {
+  font-size: 96px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
 
-    .label {
-      display: inline-block;
-      background: #e7f0b5;
-      padding: 8px 20px;
-      border-radius: 999px;
-      font-size: 14px;
-      margin-bottom: 60px;
-    }
+.cover .name {
+  margin-top: 24px;
+  font-size: 14px;
+  letter-spacing: 0.2em;
+}
 
-    .card-wrap {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 40px;
-    }
+/* STRENGTH */
+.strength {
+  background: #f7f7f7;
+}
 
-    .card {
-      background: #fff;
-      border-radius: 20px;
-      padding: 40px 32px;
-      text-align: center;
-    }
+.label {
+  display: inline-block;
+  background: #e7f0b5;
+  padding: 8px 20px;
+  border-radius: 999px;
+  font-size: 14px;
+  margin-bottom: 60px;
+}
 
-    .card h3 {
-      font-size: 18px;
-      line-height: 1.4;
-      margin-bottom: 16px;
-    }
+.card-wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
 
-    .card .line {
-      display: block;
-      width: 40px;
-      height: 1px;
-      background: #ccc;
-      margin: 0 auto 16px;
-    }
+.card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px 32px;
+  text-align: center;
+}
 
-    .card p {
-      font-size: 14px;
-      line-height: 1.6;
-      color: #555;
-    }
+.card h3 {
+  font-size: 18px;
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
 
-    /* THANK YOU */
-    .thanks {
-      background: #f5f5f5;
-      padding-top: 160px;
-    }
+.card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+}
 
-    .thanks h2 {
-      font-size: 48px;
-      margin-bottom: 40px;
-    }
+/* PORTFOLIO SECTION */
+.portfolio {
+  background: #fff;
+}
 
-    .contact p {
-      font-size: 14px;
-      margin-bottom: 8px;
-    }
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
 
-    .contact .name {
-      font-weight: 600;
-      margin-bottom: 16px;
-    }
+.work-card {
+  background: #f4f4f4;
+  border-radius: 28px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  height: 520px;
+}
 
-    /* RESPONSIVE */
-    @media (max-width: 1024px) {
-      .card-wrap {
-        grid-template-columns: 1fr;
-      }
+.work-thumb {
+  flex: 1;
+  background: #ddd;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
 
-      .cover h1 {
-        font-size: 56px;
-        margin-top: 120px;
-      }
-    }
-  </style>
+.work-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.work-info h4 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.work-info p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* THANK YOU */
+.thanks {
+  background: #f5f5f5;
+}
+
+.thanks h2 {
+  font-size: 48px;
+  margin-bottom: 40px;
+}
+
+.contact p {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.contact .name {
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .card-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cover h1 {
+    font-size: 56px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- COVER -->
-  <section class="page cover">
+<!-- COVER -->
+<section class="page cover">
+  <div class="page-inner">
     <div class="top">
       <div class="chip-group">
         <span class="chip">VISUAL</span>
@@ -173,56 +226,86 @@
 
     <h1>PORTFOLIO</h1>
     <p class="name">SOO JIN AE</p>
-  </section>
+  </div>
+</section>
 
-  <!-- STRENGTH -->
-  <section class="page strength">
+<!-- STRENGTH -->
+<section class="page strength">
+  <div class="page-inner">
     <span class="label">핵심강점</span>
 
     <div class="card-wrap">
       <div class="card">
         <h3>창의적 문제<br>해결 능력</h3>
-        <span class="line"></span>
-        <p>
-          새로운 관점으로 문제를 분석하며<br>
-          실용적이면서도 혁신적인<br>
-          디자인 솔루션을 제시합니다.
-        </p>
+        <p>새로운 관점으로 문제를 분석하고 디자인 솔루션을 제시합니다.</p>
       </div>
-
       <div class="card">
-        <h3>디자인 소프트웨어 및<br>도구 숙련도</h3>
-        <span class="line"></span>
-        <p>
-          다양한 디자인 툴에 능숙하며<br>
-          최신 도구를 활용하여<br>
-          효율적인 결과물을 제작합니다.
-        </p>
+        <h3>디자인 도구<br>숙련도</h3>
+        <p>다양한 디자인 툴을 활용해 효율적인 결과물을 만듭니다.</p>
       </div>
-
       <div class="card">
-        <h3>브랜드 및 시각적<br>일관성 이해</h3>
-        <span class="line"></span>
-        <p>
-          브랜드의 철학과 메시지를<br>
-          시각적으로 표현하며<br>
-          일관성을 유지합니다.
-        </p>
+        <h3>브랜드<br>일관성 이해</h3>
+        <p>브랜드 아이덴티티를 시각적으로 일관되게 유지합니다.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- THANK YOU -->
-  <section class="page thanks">
+<!-- PORTFOLIO -->
+<section class="page portfolio">
+  <div class="page-inner">
+    <span class="label">PROJECT</span>
+
+    <div class="portfolio-grid">
+      <div class="work-card">
+        <div class="work-thumb">
+          <!-- <img src="image1.jpg"> -->
+        </div>
+        <div class="work-info">
+          <h4>프로젝트명</h4>
+          <p>작업 배경과 역할에 대한 간단한 설명</p>
+        </div>
+      </div>
+
+      <div class="work-card">
+        <div class="work-thumb"></div>
+        <div class="work-info">
+          <h4>프로젝트명</h4>
+          <p>UX/UI 개선 포인트 요약</p>
+        </div>
+      </div>
+
+      <div class="work-card">
+        <div class="work-thumb"></div>
+        <div class="work-info">
+          <h4>프로젝트명</h4>
+          <p>디자인 컨셉과 결과</p>
+        </div>
+      </div>
+
+      <div class="work-card">
+        <div class="work-thumb"></div>
+        <div class="work-info">
+          <h4>프로젝트명</h4>
+          <p>기여도 및 성과</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THANK YOU -->
+<section class="page thanks">
+  <div class="page-inner">
     <h2>감사합니다</h2>
-
     <div class="contact">
       <p class="name">SOO JIN AE</p>
       <p>+123-456-7890</p>
       <p>hello@reallygreatsite.com</p>
       <p>www.reallygreatsite.com</p>
     </div>
-  </section>
+  </div>
+</section>
 
 </body>
 </html>
