@@ -1,129 +1,254 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>이수빈 디자이너 포트폴리오</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #eaeaea;
+  color: #111;
+}
+
+/* PAGE COMMON */
+.page {
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+  border-radius: 32px;
+  margin: 60px auto;
+  padding: 48px 64px;
+  max-width: 1600px;
+  position: relative;
+}
+
+/* TOP / BOTTOM */
+.top,
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chip-group {
+  display: flex;
+  gap: 12px;
+}
+
+.chip {
+  border: 1px solid #bbb;
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-size: 13px;
+}
+
+.date {
+  background: #111;
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+}
+
+.date.black {
+  background: #000;
+}
+
+/* COVER */
+.cover .center {
+  text-align: center;
+  margin-top: 160px;
+}
+
+.cover h1 {
+  font-size: 96px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.cover .name {
+  margin-top: 24px;
+  font-size: 14px;
+  letter-spacing: 0.2em;
+}
+
+/* STRENGTH */
+.strength {
+  background: #f7f7f7;
+}
+
+.label {
+  display: inline-block;
+  background: #e7f0b5;
+  padding: 8px 20px;
+  border-radius: 999px;
+  font-size: 14px;
+  margin-bottom: 60px;
+}
+
+.card-wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px 32px;
+  text-align: center;
+}
+
+.card h3 {
+  font-size: 18px;
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+
+.card .line {
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: #ccc;
+  margin: 0 auto 16px;
+}
+
+.card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* THANK YOU */
+.thanks {
+  background: #eaeaea;
+  padding-top: 160px;
+}
+
+.thanks h2 {
+  font-size: 48px;
+  mar
+
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="logo">
-            <a href="index.html"><img src="images/logo.png" alt="로고"></a>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#project">Project</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+
+  <!-- SECTION 01 : COVER -->
+  <section class="page cover">
+    <header class="top">
+      <div class="chip-group">
+        <span class="chip">VISUAL</span>
+        <span class="chip">DESIGNER</span>
+      </div>
+      <span class="date">2030.10</span>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <img src="images/cat-hero.png" alt="프로필 이미지">
-        <div class="hero-text">
-            <p>프로덕트 디자이너</p>
-            <p>이수빈입니다.</p>
-        </div>
-    </section>
+    <div class="center">
+      <h1>PORTFOLIO</h1>
+      <p class="name">SOO JIN AE</p>
+    </div>
+  </section>
 
+  <!-- SECTION 02 : CORE STRENGTH -->
+  <section class="page strength">
+    <span class="label">핵심강점</span>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <h2>About</h2>
-        <p class="about-intro">
-7년간 운영 디자인 경험을 바탕으로 프로덕트 디자이너로 성장하고 있습니다.
-UI 완성도를 중요하게 여기며, 사용자 흐름과 맥락을 고려한 UX 설계를 지향합니다.
+    <div class="card-wrap">
+      <div class="card">
+        <h3>창의적 문제<br>해결 능력</h3>
+        <span class="line"></span>
+        <p>
+          새로운 관점으로 문제를 분석하며<br>
+          실용적이면서도 혁신적인<br>
+          디자인 솔루션을 제시합니다.<br>
+          사용자와 클라이언트의 요구를<br>
+          창의적으로 반영합니다.
         </p>
-       
-        <div class="about-details">
-            <section class="about-card">
-                <h3>Education</h3>
-                <ul>
-                    <li>디자인학 학사</li>
-                    <li>UX/UI 전문 과정 수료</li>
-                    <li>컴퓨터공학 디자인 복수전공</li>
-                </ul>
-            </section>
+      </div>
 
-            <section class="about-card">
-                <h3>Activity</h3>
-                <ul>
-                    <li>디자인 커뮤니티 운영진</li>
-                    <li>디자인 세미나 발표</li>
-                    <li>오즈코딩스쿨 7기 아웃풋</li>
-                </ul>
-            </section>
+      <div class="card">
+        <h3>디자인 소프트웨어 및<br>도구 숙련도</h3>
+        <span class="line"></span>
+        <p>
+          다양한 디자인 툴에 능숙하며<br>
+          최신 도구를 활용하여 효율적이고<br>
+          고품질의 결과물을 제작합니다.
+        </p>
+      </div>
 
-            <section class="about-card">
-                <h3>License</h3>
-                <ul>
-                    <li>컴퓨터그래픽스운용기능사</li>
-                    <li>웹디자인기능사</li>
-                    <li>컬러리스트 1급</li>
-                </ul>
-            </section>
+      <div class="card">
+        <h3>브랜드 및 시각적<br>일관성 이해</h3>
+        <span class="line"></span>
+        <p>
+          브랜드의 철학과 메시지를<br>
+          시각적으로 표현하며,<br>
+          모든 디자인 요소에서<br>
+          일관성을 유지합니다.
+        </p>
+      </div>
+    </div>
+  </section>
 
-            <section class="about-card">
-                <h3>Skill</h3>
-                <ul>
-                    <li>Figma, Sketch</li>
-                    <li>Adobe Creative Suite</li>
-                    <li>Adobe Creative Suite</li>
-                </ul>
-            </section>
-        </div>
-    </section>
+  <!-- SECTION 03 : CORE STRENGTH (REPEAT) -->
+  <section class="page strength">
+    <span class="label">핵심강점</span>
 
-    <!-- Project Section -->
-    <section id="project" class="project">
-        <h2>Project</h2>
-       
-        <div class="project-container">
-            <section class="project-item">
-                <figure>
-                    <img src="images/project1.png" alt="여행앱 개선 디자인 프로젝트">
-                    <figcaption>여행앱 개선 디자인 프로젝트</figcaption>
-                </figure>
-            </section>
+    <div class="card-wrap">
+      <div class="card">
+        <h3>창의적 문제<br>해결 능력</h3>
+        <span class="line"></span>
+        <p>
+          새로운 관점으로 문제를 분석하며<br>
+          실용적이면서도 혁신적인<br>
+          디자인 솔루션을 제시합니다.
+        </p>
+      </div>
 
-            <section class="project-item">
-                <figure>
-                    <img src="images/project2.png" alt="여행 웹페이지 계산 디자인 프로젝트">
-                    <figcaption>여행 웹페이지 계산 디자인 프로젝트</figcaption>
-                </figure>
-            </section>
-        </div>
-    </section>
+      <div class="card">
+        <h3>디자인 소프트웨어 및<br>도구 숙련도</h3>
+        <span class="line"></span>
+        <p>
+          다양한 디자인 툴에 능숙하며<br>
+          최신 도구를 활용합니다.
+        </p>
+      </div>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Contact</h2>
-       
-        <div class="contact-container">
-            <section class="contact-item">
-                <h3>블로그</h3>
-                <ul>
-                    <li><a href="https://mint-ssam.tistory.com">https://mint-ssam.tistory.com</a></li>
-                </ul>
-            </section>
+      <div class="card">
+        <h3>브랜드 및 시각적<br>일관성 이해</h3>
+        <span class="line"></span>
+        <p>
+          브랜드 아이덴티티를<br>
+          시각적으로 일관되게 유지합니다.
+        </p>
+      </div>
+    </div>
 
-            <section class="contact-item">
-                <h3>이메일</h3>
-                <ul>
-                    <li><a href="mailto:designermintsaam@gmail.com">designermintsaam@gmail.com</a></li>
-                </ul>
-            </section>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; Mint all rights reserved.</p>
+    <footer class="bottom">
+      <div class="chip-group">
+        <span class="chip">VISUAL</span>
+        <span class="chip">DESIGNER</span>
+      </div>
+      <span class="date black">2030.10</span>
     </footer>
+  </section>
+
+  <!-- SECTION 04 : THANK YOU -->
+  <section class="page thanks">
+    <h2>감사합니다</h2>
+
+    <div class="contact">
+      <p class="name">SOO JIN AE</p>
+      <p>+123-456-7890</p>
+      <p>hello@reallygreatsite.com</p>
+      <p>www.reallygreatsite.com</p>
+    </div>
+  </section>
+
 </body>
 </html>
